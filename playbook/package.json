@@ -1,13 +1,15 @@
 {
-  "name": "bs_frontend",
-  "version": "0.1.0",
+  "name": "playbook",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.4.1",
+    "@storybook/addon-info": "^3.4.10",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "2.0.0-next.3e165448",
-    "storybook": "^1.0.0"
+    "storybook": "^1.0.0",
+    "storybook-readme": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

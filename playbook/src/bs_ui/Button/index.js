@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 
-const BSButton = props => {
+const BSTButton = props => {
   return (
     <div>
       <Button variant="contained">{props.children}</Button>
@@ -9,4 +9,4 @@ const BSButton = props => {
   );
 };
 
-export default BSButton;
+export default BSTButton;

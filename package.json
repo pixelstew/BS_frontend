@@ -3,7 +3,7 @@
   "workspaces": {
     "packages": [
       "*",
-      "bs_components/**"
+      "playbook/**"
     ],
     "nohoist": [
       "**/eslint",
@@ -17,5 +17,8 @@
       "<rootDir>/node_modules/",
       "<rootDir>/path/to/dir/"
     ]
+  },
+  "devDependencies": {
+    "lerna": "^2.11.0"
   }
 }

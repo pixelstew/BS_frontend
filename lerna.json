@@ -1,0 +1,15 @@
+{
+  "lerna": "2.11.0",
+  "packages": ["playbook/src/*"],
+  "version": "0.0.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "ignoreChanges": ["*.md"]
+    },
+    "bootstrap": {
+      "ignore": "playbook"
+    }
+  }
+}
