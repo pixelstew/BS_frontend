@@ -10,5 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^1.4.1"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
   }
 }

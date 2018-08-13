@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import gql from "graphql-tag";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider, Query } from "react-apollo";
-import { BSTButton } from "@bigsofa/ui";
+import { Button } from "@bigsofa/ui";
 
 const client = new ApolloClient({
   uri: `https://nx9zvp49q7.lp.gql.zone/graphql`
@@ -48,7 +48,8 @@ const GET_DOG_PHOTO = gql`
 
 const DogPhoto = ({ breed }) => (
   <Query query={GET_DOG_PHOTO} variables={{ breed }} skip={!breed}>
-    {({ loading, error, data, refetch }) => {
+    {({ loading, error, data, refetch, networkStatus }) => {
+      if (networkStatus === 4) return "Refetching!";
       if (loading) return null;
       if (error) return `Error!: ${error}`;
 
@@ -58,7 +59,7 @@ const DogPhoto = ({ breed }) => (
             src={data.dog.displayImage}
             style={{ height: 100, width: 100 }}
           />
-          <button onClick={() => refetch()}>Refetch!</button>
+          <Button onClick={() => refetch()}>Refetch!</Button>
         </div>
       );
     }}

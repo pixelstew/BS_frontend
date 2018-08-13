@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 
 export default props => {
   return (
-    <Button variant="contained" {...props}>
+    <Button variant="extendedFab" {...props}>
       {props.children}
     </Button>
   );

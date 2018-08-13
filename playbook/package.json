@@ -5,9 +5,12 @@
   "dependencies": {
     "@material-ui/core": "^1.4.1",
     "@storybook/addon-info": "^3.4.10",
+    "@storybook/addon-jest": "^3.4.10",
+    "jest-dom": "^1.12.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "2.0.0-next.3e165448",
+    "react-testing-library": "^5.0.0",
     "storybook": "^1.0.0",
     "storybook-readme": "^3.3.0"
   },
@@ -15,8 +18,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:generate-output": "react-scripts test --env=jsdom --json --outputFile=.jest-test-results.json || true",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
+    "prebuild:storybook": "yarn test:generate-output",
     "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {

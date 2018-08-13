@@ -1,3 +1,4 @@
-import BSTButton from "./Button";
+import Button from "./Button";
+import LinkButton from "./LinkButton";
 
-export { BSTButton };
+export { Button, LinkButton };
